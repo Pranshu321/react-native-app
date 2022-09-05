@@ -7,6 +7,7 @@ import About from './src/screens/About';
 import Contact from './src/screens/Contact';
 import User_Data from './src/screens/User_Data';
 import Course from './src/screens/Course';
+import CourseDetails from './src/screens/CourseDetails';
 import AppLoading from 'expo-app-loading';
 import { 
   Poppins_100Thin,
@@ -65,6 +66,7 @@ export default function App() {
         fontFamily: "Poppins_600SemiBold_Italic"
       },
       headerTitle: "Contact",
+      headerShown: false,
       headerTitleAlign: "center"
 
     }}/>
@@ -85,6 +87,14 @@ export default function App() {
       headerTitle: "Courses",
       headerTitleAlign: "center"
 
+    }} />
+    <Stack.Screen name='CourseDetails' component={CourseDetails} options={{
+      headerTitleStyle:{
+        fontSize: 25,
+        fontFamily: "Poppins_600SemiBold_Italic"
+      },
+      headerTitle: "Course Info",
+      headerTitleAlign: "center",
     }} />
     </Stack.Navigator>
     </NavigationContainer>
